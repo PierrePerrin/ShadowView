@@ -28,7 +28,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="ePt-gG-dHv">
                                         <rect key="frame" x="0.0" y="0.0" width="355" height="163.5"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qad-Aw-0dt" customClass="ShadowView" customModule="ShadowView">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qad-Aw-0dt" customClass="ShadowView" customModule="ShadowViewExample">
                                                 <rect key="frame" x="0.0" y="0.0" width="163.5" height="163.5"/>
                                                 <subviews>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sample.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="vHf-yD-evt">

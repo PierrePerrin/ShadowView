@@ -10,44 +10,14 @@ import UIKit
 
 extension UIImage{
     
-    /** Apply Gaussian Blur to UIImage
-     
-        - Parameter blurRadius: the input blurRadius CGFloat
-        - Returns: output UIImage
-    */
-    private func bluredImage(blurRadius:CGFloat) -> UIImage? {
-        
-       return UIImageEffects.imageByApplyingBlur(to: self, withRadius: blurRadius, tintColor: nil, saturationDeltaFactor: 1, maskImage: nil)
-    }
     
     /// Apply Gaussian Blur to a ciimage, and return a UIImage
     ///
     /// - Parameter ciimage: the imput CIImage
     /// - Returns: output UIImage
-    func applyBlur(blurRadius:CGFloat,fastProcessing:Bool=true) -> UIImage? {
+    func applyBlur(blurRadius:CGFloat,fastProcessing:Bool=true, tintColor:UIColor? = nil,saturationDeltaFactor:CGFloat) -> UIImage? {
         
-        guard !fastProcessing,let ciimage = self.ciImage,
-        let filter = CIFilter(name: "CIGaussianBlur")else{
-            return self.bluredImage(blurRadius: blurRadius)
-        }
-    
-        filter.setValue(ciimage, forKey: kCIInputImageKey)
-        filter.setValue(blurRadius, forKeyPath: kCIInputRadiusKey)
-        
-        // Due to a iOS 8 bug, we need to bridging CIContext from OC to avoid crashing
-        let eaglContext = EAGLContext(api: EAGLRenderingAPI.openGLES3)
-            ??  EAGLContext(api: EAGLRenderingAPI.openGLES2)
-            ??  EAGLContext(api: EAGLRenderingAPI.openGLES1)
-        
-        let context = eaglContext == nil ?
-            CIContext.init(options: nil)
-            : CIContext.init(eaglContext: eaglContext!)
-        
-        if let output = filter.outputImage, let cgimage = context.createCGImage(output, from: ciimage.extent) {
-            return UIImage(cgImage: cgimage)
-        }
-        
-        return self.bluredImage(blurRadius: blurRadius)
+        return UIImageEffects.imageByApplyingBlur(to: self, withRadius: blurRadius, tintColor: tintColor, saturationDeltaFactor: saturationDeltaFactor, maskImage: nil)
     }
     
     /// Resize the image to a centain percentage

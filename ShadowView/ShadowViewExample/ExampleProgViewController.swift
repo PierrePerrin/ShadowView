@@ -26,12 +26,6 @@ class ExampleProgViewController: UIViewController {
         imageView.center = exampleShadowContainerView.center
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         imageView.frame.size = CGSize(width: 200, height: 200)

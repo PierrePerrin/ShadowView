@@ -29,10 +29,10 @@
 		F926E5261F28F03100EEE74E /* sample.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F926E5241F28F03100EEE74E /* sample.jpg */; };
 		F926E5281F290F1600EEE74E /* home2.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = F926E5271F290F1600EEE74E /* home2.jpeg */; };
 		F926E5291F290F1600EEE74E /* home2.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = F926E5271F290F1600EEE74E /* home2.jpeg */; };
-		F926E52B1F29303A00EEE74E /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = F926E52A1F29303A00EEE74E /* README.md */; };
-		F926E52C1F29303A00EEE74E /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = F926E52A1F29303A00EEE74E /* README.md */; };
 		F926E52E1F29397000EEE74E /* ExampleProgViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F926E52D1F29397000EEE74E /* ExampleProgViewController.swift */; };
 		F926E52F1F29397000EEE74E /* ExampleProgViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F926E52D1F29397000EEE74E /* ExampleProgViewController.swift */; };
+		F926E5311F29570900EEE74E /* ShadowView+BlurProcess.swift in Sources */ = {isa = PBXBuildFile; fileRef = F926E5301F29570900EEE74E /* ShadowView+BlurProcess.swift */; };
+		F926E5321F29570900EEE74E /* ShadowView+BlurProcess.swift in Sources */ = {isa = PBXBuildFile; fileRef = F926E5301F29570900EEE74E /* ShadowView+BlurProcess.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +68,7 @@
 		F926E5271F290F1600EEE74E /* home2.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = home2.jpeg; sourceTree = "<group>"; };
 		F926E52A1F29303A00EEE74E /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		F926E52D1F29397000EEE74E /* ExampleProgViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleProgViewController.swift; sourceTree = "<group>"; };
+		F926E5301F29570900EEE74E /* ShadowView+BlurProcess.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ShadowView+BlurProcess.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +124,7 @@
 				F926E5181F27F48400EEE74E /* UIImageViewExtensions */,
 				F926E5171F27F3AC00EEE74E /* UIViewExtensions */,
 				F926E5151F27F38500EEE74E /* ShadowView.swift */,
+				F926E5301F29570900EEE74E /* ShadowView+BlurProcess.swift */,
 				F907D1001F27EC93007D4BE4 /* Info.plist */,
 			);
 			path = ShadowView;
@@ -324,13 +326,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F926E52B1F29303A00EEE74E /* README.md in Sources */,
 				F926E5131F27F1CA00EEE74E /* UIView+Image.swift in Sources */,
 				F926E51A1F27F49400EEE74E /* UIImage+Blur.swift in Sources */,
 				F926E51F1F27F57800EEE74E /* UIImageEffects.m in Sources */,
 				F926E52E1F29397000EEE74E /* ExampleProgViewController.swift in Sources */,
 				F926E5161F27F38600EEE74E /* ShadowView.swift in Sources */,
 				F907D12D1F27ECB2007D4BE4 /* UIView+Shadow.swift in Sources */,
+				F926E5311F29570900EEE74E /* ShadowView+BlurProcess.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -353,8 +355,8 @@
 				F926E5201F27F57800EEE74E /* UIImageEffects.m in Sources */,
 				F907D12E1F27ED24007D4BE4 /* UIView+Shadow.swift in Sources */,
 				F926E5231F27F94300EEE74E /* ShadowView.swift in Sources */,
-				F926E52C1F29303A00EEE74E /* README.md in Sources */,
 				F907D11D1F27ECA3007D4BE4 /* AppDelegate.swift in Sources */,
+				F926E5321F29570900EEE74E /* ShadowView+BlurProcess.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
