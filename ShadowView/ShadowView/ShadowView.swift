@@ -102,10 +102,10 @@ class ShadowView: UIView {
         
         let containerImage = containerLayer.asImage
         
-        let resizeImageConstant :CGFloat = 0.3
+        let resizeImageConstant :CGFloat = 1
         guard let resizedContainerImage = containerImage.resized(withPercentage: resizeImageConstant),
             let blurredImage = resizedContainerImage
-                .applyBlur(blurRadius:blurRadius,fastProcessing:false)
+                .applyBlur(blurRadius:blurRadius,fastProcessing:true)
             else {
                 return
         }

@@ -27,6 +27,8 @@
 		F926E5231F27F94300EEE74E /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F926E5151F27F38500EEE74E /* ShadowView.swift */; };
 		F926E5251F28F03100EEE74E /* sample.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F926E5241F28F03100EEE74E /* sample.jpg */; };
 		F926E5261F28F03100EEE74E /* sample.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F926E5241F28F03100EEE74E /* sample.jpg */; };
+		F926E5281F290F1600EEE74E /* home2.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = F926E5271F290F1600EEE74E /* home2.jpeg */; };
+		F926E5291F290F1600EEE74E /* home2.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = F926E5271F290F1600EEE74E /* home2.jpeg */; };
 		F97F0D2D1F27EFB600598D73 /* UIView+Corner.swift in Sources */ = {isa = PBXBuildFile; fileRef = F97F0D2C1F27EFB600598D73 /* UIView+Corner.swift */; };
 		F97F0D2E1F27F09E00598D73 /* UIView+Corner.swift in Sources */ = {isa = PBXBuildFile; fileRef = F97F0D2C1F27EFB600598D73 /* UIView+Corner.swift */; };
 /* End PBXBuildFile section */
@@ -61,6 +63,7 @@
 		F926E51C1F27F57800EEE74E /* UIImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIImageEffects.h; sourceTree = "<group>"; };
 		F926E51D1F27F57800EEE74E /* UIImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIImageEffects.m; sourceTree = "<group>"; };
 		F926E5241F28F03100EEE74E /* sample.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sample.jpg; sourceTree = "<group>"; };
+		F926E5271F290F1600EEE74E /* home2.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = home2.jpeg; sourceTree = "<group>"; };
 		F97F0D2C1F27EFB600598D73 /* UIView+Corner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Corner.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -135,6 +138,7 @@
 			children = (
 				F907D11C1F27ECA3007D4BE4 /* AppDelegate.swift */,
 				F926E5241F28F03100EEE74E /* sample.jpg */,
+				F926E5271F290F1600EEE74E /* home2.jpeg */,
 				F907D11E1F27ECA3007D4BE4 /* ViewController.swift */,
 				F907D1201F27ECA3007D4BE4 /* Main.storyboard */,
 				F907D1231F27ECA3007D4BE4 /* Assets.xcassets */,
@@ -286,6 +290,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F926E5251F28F03100EEE74E /* sample.jpg in Resources */,
+				F926E5281F290F1600EEE74E /* home2.jpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,6 +305,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F926E5291F290F1600EEE74E /* home2.jpeg in Resources */,
 				F907D1271F27ECA3007D4BE4 /* LaunchScreen.storyboard in Resources */,
 				F907D1241F27ECA3007D4BE4 /* Assets.xcassets in Resources */,
 				F907D1221F27ECA3007D4BE4 /* Main.storyboard in Resources */,
