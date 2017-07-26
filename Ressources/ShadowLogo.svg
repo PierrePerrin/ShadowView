@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="2597px" height="712px" viewBox="0 0 2597 712" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 40 (33762) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 3</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#FB6060" offset="0%"></stop>
+            <stop stop-color="#FF9678" offset="100%"></stop>
+        </linearGradient>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-2">
+            <feGaussianBlur stdDeviation="40.3611462" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-3">
+            <feGaussianBlur stdDeviation="8.44029018" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-4">
+            <feGaussianBlur stdDeviation="8.44029018" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <text id="text-5" font-family="SFUIText-Medium, SF UI Text" font-size="288" font-weight="400" letter-spacing="6.69999981" fill="#FA6963">
+            <tspan x="655" y="334">ShadowVie</tspan>
+            <tspan x="2257.95625" y="334">w</tspan>
+        </text>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-6">
+            <feOffset dx="0" dy="7" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="10" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.323086504 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-3" transform="translate(100.000000, 100.000000)">
+            <g id="ShadowLogo">
+                <path d="M390,-1.61416774e-14 C464,-1.61416774e-14 512,48 512,122 L512,390 C512,464 464,512 390,512 L122,512 C48,512 0,464 0,390 L0,122 C0,48 48,-1.61416773e-14 122,-1.61416773e-14 L390,-1.61416774e-14 Z" id="Combined-Shape" fill="url(#linearGradient-1)"></path>
+                <path d="M390,-1.61416774e-14 C464,-1.61416774e-14 512,48 512,122 L512,390 C512,464 464,512 390,512 L122,512 C48,512 0,464 0,390 L0,122 C0,48 48,-1.61416773e-14 122,-1.61416773e-14 L390,-1.61416774e-14 Z" id="Combined-Shape" fill="url(#linearGradient-1)" filter="url(#filter-2)"></path>
+                <text id="SV" filter="url(#filter-4)" font-family="SFUIText-Light, SF UI Text" font-size="288" font-weight="300" letter-spacing="4.80000019" fill="#FFFFFF">
+                    <tspan x="84" y="346">S</tspan>
+                    <tspan x="269.3625" y="346" font-size="230">V</tspan>
+                </text>
+                <text id="SV" font-family="SFUIText-Light, SF UI Text" font-size="288" font-weight="300" letter-spacing="4.80000019" fill="#FFFFFF">
+                    <tspan x="84" y="346">S</tspan>
+                    <tspan x="269.3625" y="346" font-size="230">V</tspan>
+                </text>
+            </g>
+            <g id="ShadowView" fill-opacity="1" fill="#FA6963">
+                <use filter="url(#filter-6)" xlink:href="#text-5"></use>
+                <use xlink:href="#text-5"></use>
+            </g>
+        </g>
+    </g>
+</svg>
