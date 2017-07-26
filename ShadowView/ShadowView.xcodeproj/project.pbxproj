@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		F907D1061F27EC93007D4BE4 /* ShadowView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F907D0FC1F27EC93007D4BE4 /* ShadowView.framework */; };
 		F907D10B1F27EC93007D4BE4 /* ShadowViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F907D10A1F27EC93007D4BE4 /* ShadowViewTests.swift */; };
-		F907D10D1F27EC93007D4BE4 /* ShadowView.h in Headers */ = {isa = PBXBuildFile; fileRef = F907D0FF1F27EC93007D4BE4 /* ShadowView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F907D11D1F27ECA3007D4BE4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F907D11C1F27ECA3007D4BE4 /* AppDelegate.swift */; };
 		F907D11F1F27ECA3007D4BE4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F907D11E1F27ECA3007D4BE4 /* ViewController.swift */; };
 		F907D1221F27ECA3007D4BE4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F907D1201F27ECA3007D4BE4 /* Main.storyboard */; };
@@ -17,6 +16,19 @@
 		F907D1271F27ECA3007D4BE4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F907D1251F27ECA3007D4BE4 /* LaunchScreen.storyboard */; };
 		F907D12D1F27ECB2007D4BE4 /* UIView+Shadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = F907D12C1F27ECB2007D4BE4 /* UIView+Shadow.swift */; };
 		F907D12E1F27ED24007D4BE4 /* UIView+Shadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = F907D12C1F27ECB2007D4BE4 /* UIView+Shadow.swift */; };
+		F926E5131F27F1CA00EEE74E /* UIView+Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = F926E5121F27F1CA00EEE74E /* UIView+Image.swift */; };
+		F926E5141F27F25000EEE74E /* UIView+Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = F926E5121F27F1CA00EEE74E /* UIView+Image.swift */; };
+		F926E5161F27F38600EEE74E /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F926E5151F27F38500EEE74E /* ShadowView.swift */; };
+		F926E51A1F27F49400EEE74E /* UIImage+Blur.swift in Sources */ = {isa = PBXBuildFile; fileRef = F926E5191F27F49400EEE74E /* UIImage+Blur.swift */; };
+		F926E51E1F27F57800EEE74E /* UIImageEffects.h in Headers */ = {isa = PBXBuildFile; fileRef = F926E51C1F27F57800EEE74E /* UIImageEffects.h */; };
+		F926E51F1F27F57800EEE74E /* UIImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = F926E51D1F27F57800EEE74E /* UIImageEffects.m */; };
+		F926E5201F27F57800EEE74E /* UIImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = F926E51D1F27F57800EEE74E /* UIImageEffects.m */; };
+		F926E5221F27F68400EEE74E /* UIImage+Blur.swift in Sources */ = {isa = PBXBuildFile; fileRef = F926E5191F27F49400EEE74E /* UIImage+Blur.swift */; };
+		F926E5231F27F94300EEE74E /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F926E5151F27F38500EEE74E /* ShadowView.swift */; };
+		F926E5251F28F03100EEE74E /* sample.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F926E5241F28F03100EEE74E /* sample.jpg */; };
+		F926E5261F28F03100EEE74E /* sample.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F926E5241F28F03100EEE74E /* sample.jpg */; };
+		F97F0D2D1F27EFB600598D73 /* UIView+Corner.swift in Sources */ = {isa = PBXBuildFile; fileRef = F97F0D2C1F27EFB600598D73 /* UIView+Corner.swift */; };
+		F97F0D2E1F27F09E00598D73 /* UIView+Corner.swift in Sources */ = {isa = PBXBuildFile; fileRef = F97F0D2C1F27EFB600598D73 /* UIView+Corner.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,7 +43,6 @@
 
 /* Begin PBXFileReference section */
 		F907D0FC1F27EC93007D4BE4 /* ShadowView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ShadowView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F907D0FF1F27EC93007D4BE4 /* ShadowView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShadowView.h; sourceTree = "<group>"; };
 		F907D1001F27EC93007D4BE4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F907D1051F27EC93007D4BE4 /* ShadowViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShadowViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F907D10A1F27EC93007D4BE4 /* ShadowViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowViewTests.swift; sourceTree = "<group>"; };
@@ -44,6 +55,13 @@
 		F907D1261F27ECA3007D4BE4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F907D1281F27ECA3007D4BE4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F907D12C1F27ECB2007D4BE4 /* UIView+Shadow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Shadow.swift"; sourceTree = "<group>"; };
+		F926E5121F27F1CA00EEE74E /* UIView+Image.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Image.swift"; sourceTree = "<group>"; };
+		F926E5151F27F38500EEE74E /* ShadowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShadowView.swift; sourceTree = "<group>"; };
+		F926E5191F27F49400EEE74E /* UIImage+Blur.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Blur.swift"; sourceTree = "<group>"; };
+		F926E51C1F27F57800EEE74E /* UIImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIImageEffects.h; sourceTree = "<group>"; };
+		F926E51D1F27F57800EEE74E /* UIImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIImageEffects.m; sourceTree = "<group>"; };
+		F926E5241F28F03100EEE74E /* sample.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sample.jpg; sourceTree = "<group>"; };
+		F97F0D2C1F27EFB600598D73 /* UIView+Corner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Corner.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,8 +113,9 @@
 		F907D0FE1F27EC93007D4BE4 /* ShadowView */ = {
 			isa = PBXGroup;
 			children = (
-				F907D0FF1F27EC93007D4BE4 /* ShadowView.h */,
-				F907D12C1F27ECB2007D4BE4 /* UIView+Shadow.swift */,
+				F926E5181F27F48400EEE74E /* UIImageViewExtensions */,
+				F926E5171F27F3AC00EEE74E /* UIViewExtensions */,
+				F926E5151F27F38500EEE74E /* ShadowView.swift */,
 				F907D1001F27EC93007D4BE4 /* Info.plist */,
 			);
 			path = ShadowView;
@@ -115,6 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				F907D11C1F27ECA3007D4BE4 /* AppDelegate.swift */,
+				F926E5241F28F03100EEE74E /* sample.jpg */,
 				F907D11E1F27ECA3007D4BE4 /* ViewController.swift */,
 				F907D1201F27ECA3007D4BE4 /* Main.storyboard */,
 				F907D1231F27ECA3007D4BE4 /* Assets.xcassets */,
@@ -124,6 +144,26 @@
 			path = ShadowViewExample;
 			sourceTree = "<group>";
 		};
+		F926E5171F27F3AC00EEE74E /* UIViewExtensions */ = {
+			isa = PBXGroup;
+			children = (
+				F907D12C1F27ECB2007D4BE4 /* UIView+Shadow.swift */,
+				F926E5121F27F1CA00EEE74E /* UIView+Image.swift */,
+				F97F0D2C1F27EFB600598D73 /* UIView+Corner.swift */,
+			);
+			name = UIViewExtensions;
+			sourceTree = "<group>";
+		};
+		F926E5181F27F48400EEE74E /* UIImageViewExtensions */ = {
+			isa = PBXGroup;
+			children = (
+				F926E51C1F27F57800EEE74E /* UIImageEffects.h */,
+				F926E51D1F27F57800EEE74E /* UIImageEffects.m */,
+				F926E5191F27F49400EEE74E /* UIImage+Blur.swift */,
+			);
+			name = UIImageViewExtensions;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -131,7 +171,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F907D10D1F27EC93007D4BE4 /* ShadowView.h in Headers */,
+				F926E51E1F27F57800EEE74E /* UIImageEffects.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -215,6 +255,7 @@
 					F907D1191F27ECA3007D4BE4 = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = PCKYQNTV3N;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -244,6 +285,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F926E5251F28F03100EEE74E /* sample.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,6 +303,7 @@
 				F907D1271F27ECA3007D4BE4 /* LaunchScreen.storyboard in Resources */,
 				F907D1241F27ECA3007D4BE4 /* Assets.xcassets in Resources */,
 				F907D1221F27ECA3007D4BE4 /* Main.storyboard in Resources */,
+				F926E5261F28F03100EEE74E /* sample.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,7 +314,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F926E5131F27F1CA00EEE74E /* UIView+Image.swift in Sources */,
+				F926E51A1F27F49400EEE74E /* UIImage+Blur.swift in Sources */,
+				F926E51F1F27F57800EEE74E /* UIImageEffects.m in Sources */,
+				F926E5161F27F38600EEE74E /* ShadowView.swift in Sources */,
 				F907D12D1F27ECB2007D4BE4 /* UIView+Shadow.swift in Sources */,
+				F97F0D2D1F27EFB600598D73 /* UIView+Corner.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,8 +336,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				F907D11F1F27ECA3007D4BE4 /* ViewController.swift in Sources */,
+				F926E5221F27F68400EEE74E /* UIImage+Blur.swift in Sources */,
+				F926E5141F27F25000EEE74E /* UIView+Image.swift in Sources */,
+				F926E5201F27F57800EEE74E /* UIImageEffects.m in Sources */,
 				F907D12E1F27ED24007D4BE4 /* UIView+Shadow.swift in Sources */,
+				F926E5231F27F94300EEE74E /* ShadowView.swift in Sources */,
 				F907D11D1F27ECA3007D4BE4 /* AppDelegate.swift in Sources */,
+				F97F0D2E1F27F09E00598D73 /* UIView+Corner.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -495,11 +548,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = PCKYQNTV3N;
 				INFOPLIST_FILE = ShadowViewExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = PP.ShadowViewExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ShadowView/ShadowViewExample-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -508,11 +564,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = PCKYQNTV3N;
 				INFOPLIST_FILE = ShadowViewExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = PP.ShadowViewExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ShadowView/ShadowViewExample-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -536,6 +594,7 @@
 				F907D1121F27EC93007D4BE4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F907D1131F27EC93007D4BE4 /* Build configuration list for PBXNativeTarget "ShadowViewTests" */ = {
 			isa = XCConfigurationList;
@@ -544,6 +603,7 @@
 				F907D1151F27EC93007D4BE4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F907D1291F27ECA3007D4BE4 /* Build configuration list for PBXNativeTarget "ShadowViewExample" */ = {
 			isa = XCConfigurationList;
@@ -552,6 +612,7 @@
 				F907D12B1F27ECA3007D4BE4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

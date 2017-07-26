@@ -10,9 +10,30 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var exampleView: ShadowView!
+    
+    @IBAction func blurSlider(_ sender: UISlider) {
+        
+        self.exampleView.shadowRadius = CGFloat(sender.value * 10)
+    }
+    
+    @IBAction func shadowSize(_ sender: UISlider) {
+        
+        self.exampleView.shadowScale = CGFloat(sender.value * 2) + 1
+    }
+    
+    @IBAction func shadowOpacity(_ sender: UISlider) {
+        
+        self.exampleView.shadowOpacity = sender.value
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
     }
 
     override func didReceiveMemoryWarning() {

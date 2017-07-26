@@ -8,7 +8,7 @@
 
 import UIKit
 
-@IBDesignable class ShadowView: UIView{
+@IBDesignable extension UIView{
     
     @IBInspectable public var shadowRadius : CGFloat{
         set{
@@ -54,15 +54,6 @@ import UIKit
         }
         get{
             return self.layer.shadowPath
-        }
-    }
-    
-    @IBInspectable var cornerRadius: CGFloat {
-        get {
-            return layer.cornerRadius
-        }
-        set {
-            layer.cornerRadius = newValue
         }
     }
 }
