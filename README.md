@@ -9,27 +9,28 @@
 Add simple shadows to add a gaussian blurred projection (as a shadow) to any **UIView**.
 
 ![][example-image]
-
 ## Table of contents
-- [Features](#Features)
-- [Requirements](#Requirements)
-- [Installation](#Installation)
-  * [CocoaPods](#CocoaPods)
-  * [Manually](#Manually)
-- [How it works](#How it works)
-  * [Normal Shadows](#Normal Shadows)
-  * [Projected Gaussian Shadows](#Projected Gaussian Shadows)
+<!-- TOC depthFrom:2 depthTo:4 withLinks:1 updateOnSave:1 orderedList:0 -->
+- [Features](#features)
+- [Requirements](#requirements)
+- [Installation](#installation)
+  - [CocoaPods](#cocoaPods)
+  - [Manually](#manually)
+- [How it works](#how-it-works)
+  - [Normal Shadows](#normal-shadows)
+  - [Projected Gaussian Shadows](#projected-gaussian-shadows)
 - [Usage example](#Usage example)
-  * [With Storyboard](#With Storyboard)
-    - [Normal Shadows](#Normal Shadows)
-    - [Projected Gaussian Shadows](#Projected Gaussian Shadows)
-  * [Programmatically](#With Storyboard)
-    - [Normal Shadows](#Normal Shadows)
-    - [Projected Gaussian Shadows](#Projected Gaussian Shadows)
-- [Parameters](#Parameters)
-- [Notes](#Notes)
-- [Contribute](#Contribute)
-- [Meta](#Meta)
+ - [With Storyboard](#with-storyboard)
+  - [Normal Shadows](#normal-shadows)
+  - [Projected Gaussian Shadows](#projected-gaussian-shadows)
+ - [Programmatically](#programmatically)
+    - [Normal Shadows](#normal-shadows)
+    - [Projected Gaussian Shadows](#projected-gaussian-shadows)
+- [Parameters](#parameters)
+- [Notes](#notes)
+- [Contribute](#contribute)
+- [Meta](#meta)
+<!-- /TOC -->
 
 
 ## Features
