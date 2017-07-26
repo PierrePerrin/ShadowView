@@ -1,6 +1,6 @@
 <img src=https://github.com/PierrePerrin/ShadowView/raw/master/Ressources/ShadowLogoText.png height="100"/>
 
-> Shadow makes view's shadow implementation easy and sweet 🎉 🎊.
+> ShadowView makes view's shadow implementation easy and sweet 🎉 🎊.
 
 [![Swift Version][swift-image]][swift-url] [![Build Status][travis-image]][travis-url] [![License][license-image]][license-url] [![CocoaPods Compatible](https://img.shields.io/cocoapods/v/EZSwiftExtensions.svg)](https://img.shields.io/cocoapods/v/LFAlertController.svg)   [![Platform](https://img.shields.io/cocoapods/p/LFAlertController.svg?style=flat)](http://cocoapods.org/pods/ShadowView)
 
@@ -9,6 +9,25 @@
 Add simple shadows to add a gaussian blurred projection (as a shadow) to any **UIView**.
 
 ![][example-image]
+## Table of contents
+<!-- TOC depthFrom:2 depthTo:4 withLinks:1 updateOnSave:1 orderedList:0 -->
+- [Features](#features)
+- [Requirements](#requirements)
+- [Installation](#installation)
+  - [CocoaPods](#cocoaPods)
+  - [Manually](#manually)
+- [How it works](#how-it-works)
+  - [Normal Shadows](#normal-shadows)
+  - [Projected Gaussian Shadows](#projected-gaussian-shadows)
+- [Usage example](#usage-example)
+  - [With Storyboard](#with-storyboard)
+  - [Programmatically](#programmatically)
+- [Parameters](#parameters)
+- [Notes](#notes)
+- [Contribute](#contribute)
+- [Meta](#meta)
+<!-- /TOC -->
+
 
 ## Features
 
