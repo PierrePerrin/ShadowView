@@ -29,6 +29,8 @@
 		F926E5261F28F03100EEE74E /* sample.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F926E5241F28F03100EEE74E /* sample.jpg */; };
 		F926E5281F290F1600EEE74E /* home2.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = F926E5271F290F1600EEE74E /* home2.jpeg */; };
 		F926E5291F290F1600EEE74E /* home2.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = F926E5271F290F1600EEE74E /* home2.jpeg */; };
+		F926E52B1F29303A00EEE74E /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = F926E52A1F29303A00EEE74E /* README.md */; };
+		F926E52C1F29303A00EEE74E /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = F926E52A1F29303A00EEE74E /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +64,7 @@
 		F926E51D1F27F57800EEE74E /* UIImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIImageEffects.m; sourceTree = "<group>"; };
 		F926E5241F28F03100EEE74E /* sample.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sample.jpg; sourceTree = "<group>"; };
 		F926E5271F290F1600EEE74E /* home2.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = home2.jpeg; sourceTree = "<group>"; };
+		F926E52A1F29303A00EEE74E /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +96,7 @@
 		F907D0F21F27EC93007D4BE4 = {
 			isa = PBXGroup;
 			children = (
+				F926E52A1F29303A00EEE74E /* README.md */,
 				F907D0FE1F27EC93007D4BE4 /* ShadowView */,
 				F907D11B1F27ECA3007D4BE4 /* ShadowViewExample */,
 				F907D1091F27EC93007D4BE4 /* ShadowViewTests */,
@@ -316,6 +320,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F926E52B1F29303A00EEE74E /* README.md in Sources */,
 				F926E5131F27F1CA00EEE74E /* UIView+Image.swift in Sources */,
 				F926E51A1F27F49400EEE74E /* UIImage+Blur.swift in Sources */,
 				F926E51F1F27F57800EEE74E /* UIImageEffects.m in Sources */,
@@ -342,6 +347,7 @@
 				F926E5201F27F57800EEE74E /* UIImageEffects.m in Sources */,
 				F907D12E1F27ED24007D4BE4 /* UIView+Shadow.swift in Sources */,
 				F926E5231F27F94300EEE74E /* ShadowView.swift in Sources */,
+				F926E52C1F29303A00EEE74E /* README.md in Sources */,
 				F907D11D1F27ECA3007D4BE4 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
