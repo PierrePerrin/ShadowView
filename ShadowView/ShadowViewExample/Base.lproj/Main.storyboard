@@ -23,12 +23,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="aRm-CH-5SG">
-                                <rect key="frame" x="14" y="50" width="355" height="455"/>
+                                <rect key="frame" x="10" y="50" width="355" height="455"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="ePt-gG-dHv">
                                         <rect key="frame" x="0.0" y="0.0" width="355" height="163.5"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qad-Aw-0dt" customClass="ShadowView" customModule="ShadowViewExample" customModuleProvider="target">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qad-Aw-0dt" customClass="ShadowView" customModule="ShadowView">
                                                 <rect key="frame" x="0.0" y="0.0" width="163.5" height="163.5"/>
                                                 <subviews>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sample.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="vHf-yD-evt">
@@ -154,9 +154,9 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="aRm-CH-5SG" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="30" id="FeJ-Ze-0WV"/>
-                            <constraint firstAttribute="trailing" secondItem="aRm-CH-5SG" secondAttribute="trailing" constant="6" id="XHG-Aj-XZA"/>
+                            <constraint firstAttribute="trailing" secondItem="aRm-CH-5SG" secondAttribute="trailing" constant="10" id="XHG-Aj-XZA"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" relation="greaterThanOrEqual" secondItem="aRm-CH-5SG" secondAttribute="bottom" id="wYx-ko-GU6"/>
-                            <constraint firstItem="aRm-CH-5SG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="14" id="z7B-Gz-Hns"/>
+                            <constraint firstItem="aRm-CH-5SG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="z7B-Gz-Hns"/>
                         </constraints>
                     </view>
                     <connections>
@@ -180,12 +180,19 @@
                     <view key="view" contentMode="scaleToFill" id="BGP-dz-rCo">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OUB-oa-7c3">
+                                <rect key="frame" x="60" y="173" width="272" height="204"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t1F-hl-Peh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="758" y="37"/>
+            <point key="canvasLocation" x="757.60000000000002" y="36.431784107946029"/>
         </scene>
     </scenes>
     <resources>
