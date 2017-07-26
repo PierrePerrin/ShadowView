@@ -68,19 +68,19 @@ The container takes a screen of all it's subviews and then apply blur on it.
 
 ## Usage example
 
-### With Storyboard
+### 	With Storyboard
 
-#### Normal Shadows
+#### 		Normal Shadows
 
 Any view has new paramerters in the storyboar that you can change in order to add a customize shadow to your view.  
 
-#### Projected Gaussian Shadows
+#### 		Projected Gaussian Shadows
 Add an UIView to you ViewController, change it class to ShadowView and insert in it all view that needs a blurred shadow.
 ![][exampleSTR2-image]
 
-### Programmatically
+### 	Programmatically
 
-#### Normal Shadows
+#### 		Normal Shadows
 
 Set the shadows parameters to your view and it the shadow will appear! 🌟 
 
@@ -91,7 +91,7 @@ view.shadowColor = UIColor.black.cgColor
 view.shadowOpacity = 0.3 
 ```
 
-#### Projected Gaussian Shadows
+#### 		Projected Gaussian Shadows
 
 Create you container ShadowView and then add views that need Shadows inside of it.
 ``` swift
@@ -143,6 +143,12 @@ Create you container ShadowView and then add views that need Shadows inside of i
 
 ///It changes the size of the projected shadow view.
 @IBInspectable var shadowScale : CGFloat
+
+///Changes the tint color of the blurred image
+@IBInspectable var shadowTintColor : UIColor
+
+///Changes the saturation of the blurred image (default:1)
+@IBInspectable var shadowSaturation : CGFloat
 
 ```
 
