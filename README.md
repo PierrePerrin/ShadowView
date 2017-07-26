@@ -52,7 +52,7 @@ import ShadowView
  
 Shadow view use default CoreGraphics shadows by adding it the the layer of the view. 
 
-```swift
+``` swift
 layer.shadowColor : CGColor
 layer.shadowRadius : CGFloat
 layer.shadowOffset : CGSize
@@ -68,9 +68,94 @@ The container takes a screen of all it's subviews and then apply blur on it.
 
 ## Usage example
 
-```swift
-import ShadowView
+### 	With Storyboard
+
+#### 		Normal Shadows
+
+Any view has new paramerters in the storyboar that you can change in order to add a customize shadow to your view.  
+
+#### 		Projected Gaussian Shadows
+Add an UIView to you ViewController, change it class to ShadowView and insert in it all view that needs a blurred shadow.
+![][exampleSTR2-image]
+
+### 	Programmatically
+
+#### 		Normal Shadows
+
+Set the shadows parameters to your view and it the shadow will appear! 🌟 
+
+``` swift
+view.shadowRadius = 5
+view.shadowOffset = CGSize.zero
+view.shadowColor = UIColor.black.cgColor
+view.shadowOpacity = 0.3 
 ```
+
+#### 		Projected Gaussian Shadows
+
+Create you container ShadowView and then add views that need Shadows inside of it.
+``` swift
+    let exampleShadowContainerView = ShadowView()
+    let imageView = UIImageView(image: #imageLiteral(resourceName: "sample.jpg"))
+    
+    override func loadView() {
+        super.loadView()
+        
+        exampleShadowContainerView.frame = self.view.bounds
+        exampleShadowContainerView.autoresizingMask = [.flexibleWidth,.flexibleHeight]
+        exampleShadowContainerView.shadowOffset = CGSize(width: 0, height: 10)
+        exampleShadowContainerView.shadowRadius = 20
+        
+        self.view.addSubview(exampleShadowContainerView)
+        self.exampleShadowContainerView.addSubview(imageView)
+        imageView.center = exampleShadowContainerView.center
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        imageView.frame.size = CGSize(width: 200, height: 200)
+        imageView.center = exampleShadowContainerView.center
+        self.exampleShadowContainerView.updateShadow()
+    }
+```
+
+*Please see the example for more prescisions.*
+
+## Parameters
+
+``` swift
+
+//Shared Paramerters
+
+@IBInspectable public var shadowRadius : CGFloat
+
+@IBInspectable public var shadowOffset : CGSize
+
+@IBInspectable public var shadowColor : UIColor?
+
+@IBInspectable public var shadowOpacity : Float
+
+//Normal Shadow
+
+@IBInspectable var shadowPath : CGPath?
+
+//ShadowView only
+
+///It changes the size of the projected shadow view.
+@IBInspectable var shadowScale : CGFloat
+
+///Changes the tint color of the blurred image
+@IBInspectable var shadowTintColor : UIColor
+
+///Changes the saturation of the blurred image (default:1)
+@IBInspectable var shadowSaturation : CGFloat
+
+```
+
+## Notes
+
+*Don't* use Views like Sliders or ActivityIndicators, the shadow don't update un real-time.
+It's preferable to use statics Views like Labels, images...
 
 ## Contribute
 
@@ -95,6 +180,8 @@ Distributed under the MIT license. See ``LICENSE`` for more information.
 [codebeat-url]: https://codebeat.co/projects/github-com-vsouza-awesomeios-com
 [example-image]: https://github.com/PierrePerrin/ShadowView/raw/master/Ressources/Example.png
 [example2-image]: https://github.com/PierrePerrin/ShadowView/raw/master/Ressources/Example2.png
+[example2-image]: https://github.com/PierrePerrin/ShadowView/raw/master/Ressources/Example2.png
+[exampleSTR2-image]: https://github.com/PierrePerrin/ShadowView/raw/master/Ressources/exampleSTR2.png
 
 
 
