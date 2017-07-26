@@ -1,6 +1,6 @@
 <img src=https://github.com/PierrePerrin/ShadowView/raw/master/Ressources/ShadowLogoText.png height="100"/>
 ----------
-----------
+
 > Shadow makes view's shadow implementation easy and sweet 🎉 🎊.
 
 [![Swift Version][swift-image]][swift-url] [![Build Status][travis-image]][travis-url] [![License][license-image]][license-url] [![CocoaPods Compatible](https://img.shields.io/cocoapods/v/EZSwiftExtensions.svg)](https://img.shields.io/cocoapods/v/LFAlertController.svg)   [![Platform](https://img.shields.io/cocoapods/p/LFAlertController.svg?style=flat)](http://cocoapods.org/pods/ShadowView)
