@@ -43,21 +43,39 @@ import UIKit
 import ShadowView
 ```
 #### Manually
-1. Download and drop all files in *shadowView* directory in your project.  
+1. Download and drop all files in *ShadowView* directory in your project.  
 2. Nice Job! 🎉 🎊 🎈 
+
+## How it works
+
+#### Normal Shadows
+ 
+Shadow view use default CoreGraphics shadows by adding it the the layer of the view. 
+
+```swift
+layer.shadowColor : CGColor
+layer.shadowRadius : CGFloat
+layer.shadowOffset : CGSize
+layer.shadowOpacity : Float
+layer.shadowPath : CGPath?
+```
+
+#### Projected Gaussian Shadows
+
+Here the implemation is different. A shadow container need to be added and all views that needs a blurred shadow need to be subviews of this container.
+![][example2-image]
+The container takes a screen of all it's subviews and then apply blur on it.
 
 ## Usage example
 
 ```swift
-import EZSwiftExtensions
-ez.detectScreenShot { () -> () in
-print("User took a screen shot")
-}
+import ShadowView
 ```
 
 ## Contribute
 
 We would love you for the contribution to **ShadowView**, check the ``LICENSE`` file for more info.
+If you find an issue, [open a ticket](https://github.com/olddonkey/ShadowImageView/issues/new) on it.
 
 ## Meta
 
@@ -76,6 +94,7 @@ Distributed under the MIT license. See ``LICENSE`` for more information.
 [codebeat-image]: https://codebeat.co/badges/c19b47ea-2f9d-45df-8458-b2d952fe9dad
 [codebeat-url]: https://codebeat.co/projects/github-com-vsouza-awesomeios-com
 [example-image]: https://github.com/PierrePerrin/ShadowView/raw/master/Ressources/Example.png
+[example2-image]: https://github.com/PierrePerrin/ShadowView/raw/master/Ressources/Example2.png
 
 
 
