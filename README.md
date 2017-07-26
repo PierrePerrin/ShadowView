@@ -1,5 +1,4 @@
 <img src=https://github.com/PierrePerrin/ShadowView/raw/master/Ressources/ShadowLogoText.png height="100"/>
-----------
 
 > Shadow makes view's shadow implementation easy and sweet 🎉 🎊.
 
