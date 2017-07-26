@@ -68,7 +68,7 @@ The container takes a screen of all it's subviews and then apply blur on it.
 
 ## Usage example
 
-#### With Storyboard
+### With Storyboard
 
 #### Normal Shadows
 
@@ -78,7 +78,7 @@ Any view has new paramerters in the storyboar that you can change in order to ad
 Add an UIView to you ViewController, change it class to ShadowView and insert in it all view that needs a blurred shadow.
 ![][exampleSTR2-image]
 
-#### Programmatically
+### Programmatically
 
 #### Normal Shadows
 
