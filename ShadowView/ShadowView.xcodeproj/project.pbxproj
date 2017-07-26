@@ -31,6 +31,8 @@
 		F926E5291F290F1600EEE74E /* home2.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = F926E5271F290F1600EEE74E /* home2.jpeg */; };
 		F926E52B1F29303A00EEE74E /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = F926E52A1F29303A00EEE74E /* README.md */; };
 		F926E52C1F29303A00EEE74E /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = F926E52A1F29303A00EEE74E /* README.md */; };
+		F926E52E1F29397000EEE74E /* ExampleProgViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F926E52D1F29397000EEE74E /* ExampleProgViewController.swift */; };
+		F926E52F1F29397000EEE74E /* ExampleProgViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F926E52D1F29397000EEE74E /* ExampleProgViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +67,7 @@
 		F926E5241F28F03100EEE74E /* sample.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sample.jpg; sourceTree = "<group>"; };
 		F926E5271F290F1600EEE74E /* home2.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = home2.jpeg; sourceTree = "<group>"; };
 		F926E52A1F29303A00EEE74E /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		F926E52D1F29397000EEE74E /* ExampleProgViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleProgViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +144,7 @@
 				F926E5241F28F03100EEE74E /* sample.jpg */,
 				F926E5271F290F1600EEE74E /* home2.jpeg */,
 				F907D11E1F27ECA3007D4BE4 /* ViewController.swift */,
+				F926E52D1F29397000EEE74E /* ExampleProgViewController.swift */,
 				F907D1201F27ECA3007D4BE4 /* Main.storyboard */,
 				F907D1231F27ECA3007D4BE4 /* Assets.xcassets */,
 				F907D1251F27ECA3007D4BE4 /* LaunchScreen.storyboard */,
@@ -324,6 +328,7 @@
 				F926E5131F27F1CA00EEE74E /* UIView+Image.swift in Sources */,
 				F926E51A1F27F49400EEE74E /* UIImage+Blur.swift in Sources */,
 				F926E51F1F27F57800EEE74E /* UIImageEffects.m in Sources */,
+				F926E52E1F29397000EEE74E /* ExampleProgViewController.swift in Sources */,
 				F926E5161F27F38600EEE74E /* ShadowView.swift in Sources */,
 				F907D12D1F27ECB2007D4BE4 /* UIView+Shadow.swift in Sources */,
 			);
@@ -343,6 +348,7 @@
 			files = (
 				F907D11F1F27ECA3007D4BE4 /* ViewController.swift in Sources */,
 				F926E5221F27F68400EEE74E /* UIImage+Blur.swift in Sources */,
+				F926E52F1F29397000EEE74E /* ExampleProgViewController.swift in Sources */,
 				F926E5141F27F25000EEE74E /* UIView+Image.swift in Sources */,
 				F926E5201F27F57800EEE74E /* UIImageEffects.m in Sources */,
 				F907D12E1F27ED24007D4BE4 /* UIView+Shadow.swift in Sources */,
