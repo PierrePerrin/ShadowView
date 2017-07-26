@@ -10,6 +10,28 @@ Add simple shadows to add a gaussian blurred projection (as a shadow) to any **U
 
 ![][example-image]
 
+## Table of contents
+- [Features](#Features)
+- [Requirements](#Requirements)
+- [Installation](#Installation)
+  * [CocoaPods](#CocoaPods)
+  * [Manually](#Manually)
+- [How it works](#How it works)
+  * [Normal Shadows](#Normal Shadows)
+  * [Projected Gaussian Shadows](#Projected Gaussian Shadows)
+- [Usage example](#Usage example)
+  * [With Storyboard](#With Storyboard)
+    - [Normal Shadows](#Normal Shadows)
+    - [Projected Gaussian Shadows](#Projected Gaussian Shadows)
+  * [Programmatically](#With Storyboard)
+    - [Normal Shadows](#Normal Shadows)
+    - [Projected Gaussian Shadows](#Projected Gaussian Shadows)
+- [Parameters](#Parameters)
+- [Notes](#Notes)
+- [Contribute](#Contribute)
+- [Meta](#Meta)
+
+
 ## Features
 
 - [x] Add shadow easily from the **storyboard** and **programmatically**.
