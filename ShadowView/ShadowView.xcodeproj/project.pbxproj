@@ -29,8 +29,6 @@
 		F926E5261F28F03100EEE74E /* sample.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F926E5241F28F03100EEE74E /* sample.jpg */; };
 		F926E5281F290F1600EEE74E /* home2.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = F926E5271F290F1600EEE74E /* home2.jpeg */; };
 		F926E5291F290F1600EEE74E /* home2.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = F926E5271F290F1600EEE74E /* home2.jpeg */; };
-		F97F0D2D1F27EFB600598D73 /* UIView+Corner.swift in Sources */ = {isa = PBXBuildFile; fileRef = F97F0D2C1F27EFB600598D73 /* UIView+Corner.swift */; };
-		F97F0D2E1F27F09E00598D73 /* UIView+Corner.swift in Sources */ = {isa = PBXBuildFile; fileRef = F97F0D2C1F27EFB600598D73 /* UIView+Corner.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,7 +62,6 @@
 		F926E51D1F27F57800EEE74E /* UIImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIImageEffects.m; sourceTree = "<group>"; };
 		F926E5241F28F03100EEE74E /* sample.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sample.jpg; sourceTree = "<group>"; };
 		F926E5271F290F1600EEE74E /* home2.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = home2.jpeg; sourceTree = "<group>"; };
-		F97F0D2C1F27EFB600598D73 /* UIView+Corner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Corner.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,7 +150,6 @@
 			children = (
 				F907D12C1F27ECB2007D4BE4 /* UIView+Shadow.swift */,
 				F926E5121F27F1CA00EEE74E /* UIView+Image.swift */,
-				F97F0D2C1F27EFB600598D73 /* UIView+Corner.swift */,
 			);
 			name = UIViewExtensions;
 			sourceTree = "<group>";
@@ -325,7 +321,6 @@
 				F926E51F1F27F57800EEE74E /* UIImageEffects.m in Sources */,
 				F926E5161F27F38600EEE74E /* ShadowView.swift in Sources */,
 				F907D12D1F27ECB2007D4BE4 /* UIView+Shadow.swift in Sources */,
-				F97F0D2D1F27EFB600598D73 /* UIView+Corner.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -348,7 +343,6 @@
 				F907D12E1F27ED24007D4BE4 /* UIView+Shadow.swift in Sources */,
 				F926E5231F27F94300EEE74E /* ShadowView.swift in Sources */,
 				F907D11D1F27ECA3007D4BE4 /* AppDelegate.swift in Sources */,
-				F97F0D2E1F27F09E00598D73 /* UIView+Corner.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

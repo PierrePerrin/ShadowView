@@ -70,13 +70,14 @@ class ShadowView: UIView {
             self.shadowImageView.alpha = CGFloat(newValue)
         }
         get{
-           return Float(self.shadowImageView.alpha)
+            return Float(self.shadowImageView.alpha)
         }
     }
     
     func updateShadow(){
         
         blurWork?.cancel()
+        self.shadowImageView.alpha = 0
         blurWork = DispatchWorkItem(qos: DispatchQoS.userInteractive, flags: DispatchWorkItemFlags.noQoS) {
             self.createLayerImage()
         }
@@ -84,7 +85,7 @@ class ShadowView: UIView {
     }
     
     private func createLayerImage(){
-
+        
         let image = self.asImage
         
         
@@ -96,7 +97,7 @@ class ShadowView: UIView {
         blurImageLayer.frame = CGRect(origin: .zero,size: imageSize)
         blurImageLayer.position = CGPoint(x:containerLayer.bounds.midX,y:containerLayer.bounds.midY)
         blurImageLayer.contents = image.cgImage
-        blurImageLayer.cornerRadius = self.cornerRadius
+        
         blurImageLayer.masksToBounds = true
         containerLayer.addSublayer(blurImageLayer)
         
@@ -112,7 +113,8 @@ class ShadowView: UIView {
         
         self.layer.masksToBounds = false
         DispatchQueue.main.async {
-           self.shadowImageView?.image = blurredImage
+            self.shadowImageView?.image = blurredImage
+            self.shadowImageView.alpha = 1
         }
     }
     

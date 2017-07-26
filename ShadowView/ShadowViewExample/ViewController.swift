@@ -12,15 +12,12 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var exampleView: ShadowView!
     @IBOutlet weak var imageviEW: UIImageView!
-    @IBOutlet weak var shadowexample2: ShadowView!
     
     let image1 = #imageLiteral(resourceName: "sample.jpg")
     let image2 = #imageLiteral(resourceName: "home2.jpeg")
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
-        self.shadowexample2.updateShadow()
     }
     
     @IBAction func blurSlider(_ sender: UISlider) {
@@ -45,7 +42,12 @@ class ViewController: UIViewController {
         }else{
             self.imageviEW.image = image1
         }
-        self.shadowexample2.updateShadow()
+        
+        self.perform(#selector(self.update), with: nil, afterDelay: 0.4)
+        
+    }
+    
+    func update(){
         self.exampleView.updateShadow()
     }
     
