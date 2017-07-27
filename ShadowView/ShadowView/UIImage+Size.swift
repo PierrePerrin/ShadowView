@@ -11,15 +11,6 @@ import UIKit
 extension UIImage{
     
     
-    /// Apply Gaussian Blur to a ciimage, and return a UIImage
-    ///
-    /// - Parameter ciimage: the imput CIImage
-    /// - Returns: output UIImage
-    func applyBlur(blurRadius:CGFloat,fastProcessing:Bool=true, tintColor:UIColor? = nil,saturationDeltaFactor:CGFloat) -> UIImage? {
-        
-        return UIImageEffects.imageByApplyingBlur(to: self, withRadius: blurRadius, tintColor: tintColor, saturationDeltaFactor: saturationDeltaFactor, maskImage: nil)
-    }
-    
     /// Resize the image to a centain percentage
     ///
     /// - Parameter percentage: Percentage value

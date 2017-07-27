@@ -6,7 +6,7 @@
 //  Copyright © 2017 Pierreperrin. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 extension ShadowView{
     
@@ -52,11 +52,10 @@ extension ShadowView{
         containerLayer.addSublayer(blurImageLayer)
         
         let containerImage = containerLayer.asImage
-        
+      
         let resizeImageConstant :CGFloat = 1
         guard let resizedContainerImage = containerImage.resized(withPercentage: resizeImageConstant),
-            let blurredImage = resizedContainerImage
-                .applyBlur(blurRadius:blurRadius,fastProcessing:true, tintColor : self.shadowTintColor, saturationDeltaFactor: self.shadowSaturation)
+            let blurredImage = resizedContainerImage.applyBlurWithRadius(blurRadius, tintColor: self.shadowTintColor, saturationDeltaFactor: self.shadowSaturation)
             else {
                 return
         }
