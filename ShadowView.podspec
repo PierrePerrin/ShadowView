@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "ShadowView"
-  s.version      = "1.0.1"
+  s.version      = '1.0.2'
   s.summary      = "ShadowView makes view's shadow implementation easy and sweet"
 
   # This description is used to generate tags and improve search results.
@@ -25,8 +25,8 @@ Pod::Spec.new do |s|
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   s.description  = <<-DESC
-                    Add simple shadows or add a gaussian blurred projection (as a shadow) to any UIView.
-                   DESC
+Add simple shadows or add a gaussian blurred projection (as a shadow) to any UIView.
+DESC
 
   s.homepage     = "https://github.com/PierrePerrin/ShadowView"
   # s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
@@ -65,7 +65,7 @@ Pod::Spec.new do |s|
   #
 
   # s.platform     = :ios
-   s.platform     = :ios, "9.0"
+   s.platform     = :ios, "8.0"
 
   #  When using multiple platforms
   # s.ios.deployment_target = "5.0"
@@ -80,7 +80,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/PierrePerrin/ShadowView.git", :tag => "#{s.version}" }
+  s.source       = { :git => 'https://github.com/PierrePerrin/ShadowView.git', :tag =>  s.version.to_s  }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -91,7 +91,7 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "Sources", "ShadowView/ShadowView/"
+  s.source_files  = 'Sources", "ShadowView/ShadowView/*.swift'
   #s.exclude_files = "Classes/Exclude"
 
   # s.public_header_files = "Classes/**/*.h"
@@ -119,7 +119,7 @@ Pod::Spec.new do |s|
 
   # s.framework  = "SomeFramework"
   # s.frameworks = "SomeFramework", "AnotherFramework"
-  s.frameworks = 'Foundation', 'UIKit'
+  # s.frameworks = 'Foundation', 'UIKit'
 
   # s.library   = "iconv"
   # s.libraries = "iconv", "xml2"
@@ -136,7 +136,7 @@ Pod::Spec.new do |s|
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   # s.dependency "JSONKit", "~> 1.4"
 
-   s.pod_target_xcconfig = { 'SWIFT_VERSION' => '3.1' }
+   s.pod_target_xcconfig = { 'SWIFT_VERSION' => '3.0'}
   s.requires_arc  = true
 
 end
