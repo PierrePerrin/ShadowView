@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "ShadowView"
-  s.version      = '1.0.2'
+  s.version      = '1.0.3'
   s.summary      = "ShadowView makes view's shadow implementation easy and sweet"
 
   # This description is used to generate tags and improve search results.
@@ -65,7 +65,7 @@ DESC
   #
 
   # s.platform     = :ios
-   s.platform     = :ios, "8.0"
+s.ios.deployment_target = '8.1'
 
   #  When using multiple platforms
   # s.ios.deployment_target = "5.0"
@@ -91,7 +91,7 @@ DESC
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = 'Sources", "ShadowView/ShadowView/*.swift'
+  s.source_files  = 'ShadowView/ShadowView/*.swift'
   #s.exclude_files = "Classes/Exclude"
 
   # s.public_header_files = "Classes/**/*.h"
@@ -135,8 +135,5 @@ DESC
 
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   # s.dependency "JSONKit", "~> 1.4"
-
-   s.pod_target_xcconfig = { 'SWIFT_VERSION' => '3.0'}
-  s.requires_arc  = true
 
 end
