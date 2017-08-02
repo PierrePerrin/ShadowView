@@ -8,9 +8,14 @@
 
 import UIKit
 
-@IBDesignable
 class ShadowView: UIView {
     
+    lazy var blurOperationQueue : OperationQueue = {
+        let operationQueue = OperationQueue.init()
+        operationQueue.maxConcurrentOperationCount = 1
+        operationQueue.qualityOfService = .userInteractive
+        return operationQueue
+    }()
     internal var blurWork : DispatchWorkItem?
     internal var blurRadius :CGFloat = 5.0
     var shadowImageView : UIImageView!
@@ -40,10 +45,12 @@ class ShadowView: UIView {
             self.updateShadow()
         }
     }
-    
-    @IBInspectable var shadowTintColor : UIColor = .clear{
-        didSet{
-            self.updateShadow()
+    private var shadowTintColor : UIColor?
+    override var shadowColor: UIColor?{
+        get{
+            return shadowTintColor
+        }set{
+            self.shadowTintColor = newValue
         }
     }
     
@@ -81,8 +88,9 @@ class ShadowView: UIView {
     override func layoutSubviews() {
         super.layoutSubviews()
         
-        self.shadowImageView.center = CGPoint(x:self.bounds.midX + self.shadowOffset.width,y:self.bounds.midY + self.shadowOffset.height)
         self.shadowImageView.frame.size = self.frame.size.scaled(by: correctShadowScale)
+        self.shadowImageView.center = CGPoint(x:self.bounds.midX + self.shadowOffset.width,y:self.bounds.midY + self.shadowOffset.height)
+        
     }
     
 }

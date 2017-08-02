@@ -24,6 +24,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func blurSlider(_ sender: UISlider) {
+        sender.isContinuous = false
         
         self.exampleView.shadowRadius = CGFloat(sender.value * 50)
         self.otherImage.shadowRadius = CGFloat(sender.value * 50)

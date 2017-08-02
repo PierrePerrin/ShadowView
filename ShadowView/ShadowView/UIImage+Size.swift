@@ -7,9 +7,9 @@
 //
 
 import UIKit
+import CoreGraphics
 
 extension UIImage{
-    
     
     /// Resize the image to a centain percentage
     ///
@@ -29,6 +29,34 @@ extension UIImage{
         defer { UIGraphicsEndImageContext() }
         draw(in: CGRect(origin: .zero, size: canvasSize))
         return UIGraphicsGetImageFromCurrentImageContext()
+    }
+    
+    
+    func applyBlur(blurRadius:CGFloat) -> UIImage?{
+        
+        guard let ciImage = CIImage.init(image: self) else{return nil}
+        
+        if let filter = CIFilter(name: "CIGaussianBlur") {
+            
+            filter.setValue(ciImage, forKey: kCIInputImageKey)
+            filter.setValue(blurRadius, forKey: kCIInputRadiusKey)
+            let eaglContext =
+                EAGLContext(api: EAGLRenderingAPI.openGLES3)
+                    ??  EAGLContext(api: EAGLRenderingAPI.openGLES2)
+                    ??  EAGLContext(api: EAGLRenderingAPI.openGLES1)
+            
+            let context = eaglContext == nil ?
+                CIContext.init(options: nil)
+                : CIContext.init(eaglContext: eaglContext!)
+            
+            if let output = filter.outputImage,
+                let cgimg = context.createCGImage(output, from: ciImage.extent)
+            {
+                return UIImage(cgImage: cgimg)
+            }
+        }
+        
+        return nil
     }
 }
 

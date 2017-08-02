@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "ShadowView"
-  s.version      = '1.0.3'
+  s.version      = '1.1'
   s.summary      = "ShadowView makes view's shadow implementation easy and sweet"
 
   # This description is used to generate tags and improve search results.
@@ -65,7 +65,7 @@ DESC
   #
 
   # s.platform     = :ios
-s.ios.deployment_target = '8.1'
+  s.ios.deployment_target = '8.1'
 
   #  When using multiple platforms
   # s.ios.deployment_target = "5.0"

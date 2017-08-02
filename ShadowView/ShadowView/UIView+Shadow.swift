@@ -8,7 +8,7 @@
 
 import UIKit
 
-@IBDesignable extension UIView{
+extension UIView{
     
     @IBInspectable public var shadowRadius : CGFloat{
         set{
@@ -28,6 +28,7 @@ import UIKit
             return self.layer.shadowOffset
         }
     }
+    
     
     @IBInspectable public var shadowColor : UIColor?{
         set{
