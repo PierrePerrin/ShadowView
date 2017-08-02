@@ -1,6 +1,6 @@
 <img src=https://github.com/PierrePerrin/ShadowView/raw/master/Ressources/ShadowLogoText.png height="100"/>
 
-> ShadowView makes view's shadow implementation easy and sweet 🎉 🎊.
+> ShadowView is an iOS Shadow library that makes view's shadow implementation easy and sweet 🎉 🎊.
 
 [![Swift Version][swift-image]][swift-url] [![Build Status][travis-image]][travis-url] [![License][license-image]][license-url] [![CocoaPods Compatible](https://img.shields.io/cocoapods/v/EZSwiftExtensions.svg)](https://img.shields.io/cocoapods/v/LFAlertController.svg)   [![Platform](https://img.shields.io/cocoapods/p/LFAlertController.svg?style=flat)](http://cocoapods.org/pods/ShadowView)
 
@@ -42,6 +42,7 @@ Add simple shadows to add a gaussian blurred projection (as a shadow) to any **U
 
 ## Installation
 
+
 #### CocoaPods
 You can use [CocoaPods](http://cocoapods.org/) to install `ShadowView` by adding it to your `Podfile`:
 
@@ -63,13 +64,13 @@ import ShadowView
 ```
 #### Manually
 1. Download and drop all files in *ShadowView* directory in your project.  
-2. Nice Job! 🎉 🎊 🎈 
+2. Nice Job the best shadow library is now installed! 🎉 🎊 🎈 
 
 ## How it works
 
 #### Normal Shadows
  
-Shadow view use default CoreGraphics shadows by adding it the the layer of the view. 
+This shadow framework uses default CoreGraphics shadows by adding it the the layer of the view. 
 
 ``` swift
 layer.shadowColor : CGColor
