@@ -34,7 +34,7 @@ extension UIImage{
     
     func applyBlur(blurRadius:CGFloat) -> UIImage?{
         
-        guard let ciImage = CIImage.init(image: self) else{return nil}
+        guard let ciImage = CIImage(image: self) else {return nil}
         
         if let filter = CIFilter(name: "CIGaussianBlur") {
             
@@ -46,8 +46,8 @@ extension UIImage{
                     ??  EAGLContext(api: EAGLRenderingAPI.openGLES1)
             
             let context = eaglContext == nil ?
-                CIContext.init(options: nil)
-                : CIContext.init(eaglContext: eaglContext!)
+                CIContext(options: nil)
+                : CIContext(eaglContext: eaglContext!)
             
             if let output = filter.outputImage,
                 let cgimg = context.createCGImage(output, from: ciImage.extent)

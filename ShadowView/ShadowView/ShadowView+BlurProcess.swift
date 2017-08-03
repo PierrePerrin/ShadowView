@@ -17,11 +17,11 @@ extension ShadowView{
         }
         
         let imageView = UIImageView()
-        imageView.frame.size = self.frame.size.scaled(by: shadowScale)
-        imageView.center = CGPoint(x:self.bounds.midX,y:self.bounds.midY)
+        imageView.frame.size = frame.size.scaled(by: shadowScale)
+        imageView.center = CGPoint(x:bounds.midX,y:bounds.midY)
         imageView.layer.masksToBounds = false
-        self.shadowImageView = imageView
-        self.insertSubview(imageView,at:0)
+        shadowImageView = imageView
+        insertSubview(imageView,at:0)
     }
     
     
@@ -29,22 +29,22 @@ extension ShadowView{
     func updateShadow(){
         
         self.shadowImageView.image = nil
-        DispatchQueue.global(qos: DispatchQoS.QoSClass.utility).async {
-            self.createLayerImage()
+        DispatchQueue.global(qos: DispatchQoS.QoSClass.utility).async { [weak self] in
+            self?.createLayerImage()
         }
     }
     
     private func createLayerImage(){
         
-        let image = self.asImage
+        let image = asImage
         let containerLayer = CALayer()
         let imageSize = image.size
-        containerLayer.frame = CGRect(origin: .zero, size: imageSize.scaled(by:self.scaleImageConstant))
+        containerLayer.frame = CGRect(origin: .zero, size: imageSize.scaled(by:scaleImageConstant))
         containerLayer.backgroundColor = UIColor.clear.cgColor
         let blurImageLayer = CALayer()
         blurImageLayer.frame = CGRect(origin: .zero,size: imageSize)
         blurImageLayer.position = CGPoint(x:containerLayer.bounds.midX,y:containerLayer.bounds.midY)
-        blurImageLayer.contents = image.applyBlurWithRadius(0, tintColor: self.shadowColor, saturationDeltaFactor: self.shadowSaturation)?.cgImage
+        blurImageLayer.contents = image.applyBlurWithRadius(0, tintColor: shadowColor, saturationDeltaFactor: shadowSaturation)?.cgImage
         
         blurImageLayer.masksToBounds = false
         containerLayer.addSublayer(blurImageLayer)
@@ -53,15 +53,15 @@ extension ShadowView{
         
         let resizeImageConstant :CGFloat = 1
         guard let resizedContainerImage = containerImage.resized(withPercentage: resizeImageConstant),
-            let blurredImage = resizedContainerImage.applyBlur(blurRadius: self.blurRadius)
+            let blurredImage = resizedContainerImage.applyBlur(blurRadius: blurRadius)
             else {
                 return
         }
         
-        self.layer.masksToBounds = false
+        layer.masksToBounds = false
         
-        DispatchQueue.main.async {
-            self.shadowImageView?.image = blurredImage
+        DispatchQueue.main.async { [weak self] in
+            self?.shadowImageView?.image = blurredImage
         }
         
     }

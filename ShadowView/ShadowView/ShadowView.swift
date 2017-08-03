@@ -10,39 +10,32 @@ import UIKit
 
 class ShadowView: UIView {
     
-    lazy var blurOperationQueue : OperationQueue = {
-        let operationQueue = OperationQueue.init()
-        operationQueue.maxConcurrentOperationCount = 1
-        operationQueue.qualityOfService = .userInteractive
-        return operationQueue
-    }()
-    internal var blurWork : DispatchWorkItem?
     internal var blurRadius :CGFloat = 5.0
     var shadowImageView : UIImageView!
     let scaleImageConstant :CGFloat = 3
     var correctShadowScale : CGFloat{
-        return self.shadowScale + scaleImageConstant - 1
+        return shadowScale + scaleImageConstant - 1
     }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        self.addImageView()
+        addImageView()
     }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        self.addImageView()
+        addImageView()
     }
     
     @IBInspectable var shadowScale : CGFloat = 1{
         didSet{
-            self.layoutSubviews()
+            layoutSubviews()
         }
     }
     
     @IBInspectable var shadowSaturation : CGFloat = 1{
         didSet{
-            self.updateShadow()
+            updateShadow()
         }
     }
     private var shadowTintColor : UIColor?
@@ -50,20 +43,20 @@ class ShadowView: UIView {
         get{
             return shadowTintColor
         }set{
-            self.shadowTintColor = newValue
+            shadowTintColor = newValue
         }
     }
     
     override public var shadowOffset : CGSize{
         didSet{
-            self.layoutSubviews()
+            layoutSubviews()
         }
     }
     
     override public var shadowRadius : CGFloat{
         set{
-            self.blurRadius = newValue
-            self.updateShadow()
+            blurRadius = newValue
+            updateShadow()
         }
         get{
             return blurRadius
@@ -72,24 +65,24 @@ class ShadowView: UIView {
     
     override var shadowOpacity: Float{
         set{
-            self.shadowImageView.alpha = CGFloat(newValue)
+            shadowImageView.alpha = CGFloat(newValue)
         }
         get{
-            return Float(self.shadowImageView.alpha)
+            return Float(shadowImageView.alpha)
         }
     }
     
     override func didMoveToSuperview() {
         super.didMoveToSuperview()
-        self.updateShadow()
+        updateShadow()
     }
     
     //Reload the image if the view changed.
     override func layoutSubviews() {
         super.layoutSubviews()
         
-        self.shadowImageView.frame.size = self.frame.size.scaled(by: correctShadowScale)
-        self.shadowImageView.center = CGPoint(x:self.bounds.midX + self.shadowOffset.width,y:self.bounds.midY + self.shadowOffset.height)
+        shadowImageView.frame.size = frame.size.scaled(by: correctShadowScale)
+        shadowImageView.center = CGPoint(x:bounds.midX + shadowOffset.width,y:bounds.midY + shadowOffset.height)
         
     }
     
