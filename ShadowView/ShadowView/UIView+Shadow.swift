@@ -12,49 +12,49 @@ extension UIView{
     
     @IBInspectable public var shadowRadius : CGFloat{
         set{
-            self.layer.shadowRadius = newValue
+            layer.shadowRadius = newValue
             layer.masksToBounds = newValue < 0
         }
         get{
-            return self.layer.shadowRadius
+            return layer.shadowRadius
         }
     }
     
     @IBInspectable public var shadowOffset : CGSize{
         set{
-            self.layer.shadowOffset = newValue
+            layer.shadowOffset = newValue
         }
         get{
-            return self.layer.shadowOffset
+            return layer.shadowOffset
         }
     }
     
     
     @IBInspectable public var shadowColor : UIColor?{
         set{
-            self.layer.shadowColor = newValue?.cgColor
+            layer.shadowColor = newValue?.cgColor
         }
         get{
-            return UIColor.init(cgColor: self.layer.shadowColor ?? UIColor().cgColor)
+            return UIColor(cgColor: layer.shadowColor ?? UIColor().cgColor)
         }
     }
     
     @IBInspectable public var shadowOpacity : Float{
         set{
-            self.layer.shadowOpacity = newValue
+            layer.shadowOpacity = newValue
             layer.masksToBounds = newValue < 0
         }
         get{
-            return self.layer.shadowOpacity
+            return layer.shadowOpacity
         }
     }
     
     @IBInspectable var shadowPath : CGPath?{
         set{
-            self.layer.shadowPath = newValue
+            layer.shadowPath = newValue
         }
         get{
-            return self.layer.shadowPath
+            return layer.shadowPath
         }
     }
 }

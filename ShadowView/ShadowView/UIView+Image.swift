@@ -20,14 +20,14 @@ extension CALayer{
     
     ///Returns a UIImage copy of the layer
     var asImage : UIImage{
-        UIGraphicsBeginImageContext(self.frame.size)
-        self.render(in: UIGraphicsGetCurrentContext()!)
+        UIGraphicsBeginImageContext(frame.size)
+        render(in: UIGraphicsGetCurrentContext()!)
         let image = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         if let cgImage = image?.cgImage {
-            return UIImage.init(cgImage: cgImage)
+            return UIImage(cgImage: cgImage)
         } else {
-            return UIImage.init()
+            return UIImage()
         }
     }
 }
