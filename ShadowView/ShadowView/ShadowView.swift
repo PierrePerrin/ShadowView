@@ -8,38 +8,38 @@
 
 import UIKit
 
-class ShadowView: UIView {
+public class ShadowView: UIView {
     
     internal var blurRadius :CGFloat = 5.0
-    var shadowImageView : UIImageView!
-    let scaleImageConstant :CGFloat = 3
-    var correctShadowScale : CGFloat{
+    public var shadowImageView : UIImageView!
+    internal let scaleImageConstant :CGFloat = 3
+    public var correctShadowScale : CGFloat{
         return shadowScale + scaleImageConstant - 1
     }
     
-    override init(frame: CGRect) {
+    public override init(frame: CGRect) {
         super.init(frame: frame)
         addImageView()
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    public required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         addImageView()
     }
     
-    @IBInspectable var shadowScale : CGFloat = 1{
+    @IBInspectable public var shadowScale : CGFloat = 1{
         didSet{
             layoutSubviews()
         }
     }
     
-    @IBInspectable var shadowSaturation : CGFloat = 1{
+    @IBInspectable public var shadowSaturation : CGFloat = 1{
         didSet{
             updateShadow()
         }
     }
     private var shadowTintColor : UIColor?
-    override var shadowColor: UIColor?{
+    public override var shadowColor: UIColor?{
         get{
             return shadowTintColor
         }set{
@@ -47,13 +47,13 @@ class ShadowView: UIView {
         }
     }
     
-    override public var shadowOffset : CGSize{
+    public override var shadowOffset : CGSize{
         didSet{
             layoutSubviews()
         }
     }
     
-    override public var shadowRadius : CGFloat{
+    public override var shadowRadius : CGFloat{
         set{
             blurRadius = newValue
             updateShadow()
@@ -63,7 +63,7 @@ class ShadowView: UIView {
         }
     }
     
-    override var shadowOpacity: Float{
+    public override var shadowOpacity: Float{
         set{
             shadowImageView.alpha = CGFloat(newValue)
         }
@@ -72,13 +72,13 @@ class ShadowView: UIView {
         }
     }
     
-    override func didMoveToSuperview() {
+    public override func didMoveToSuperview() {
         super.didMoveToSuperview()
         updateShadow()
     }
     
     //Reload the image if the view changed.
-    override func layoutSubviews() {
+    public override func layoutSubviews() {
         super.layoutSubviews()
         
         shadowImageView.frame.size = frame.size.scaled(by: correctShadowScale)

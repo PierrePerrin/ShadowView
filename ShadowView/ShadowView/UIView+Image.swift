@@ -11,7 +11,7 @@ import UIKit
 extension UIView{
     
     ///Returns a UIImage copy of the view
-    var asImage : UIImage{
+    internal var asImage : UIImage{
         return layer.asImage
     }
 }
@@ -19,7 +19,7 @@ extension UIView{
 extension CALayer{
     
     ///Returns a UIImage copy of the layer
-    var asImage : UIImage{
+    internal var asImage : UIImage{
         UIGraphicsBeginImageContext(frame.size)
         render(in: UIGraphicsGetCurrentContext()!)
         let image = UIGraphicsGetImageFromCurrentImageContext()

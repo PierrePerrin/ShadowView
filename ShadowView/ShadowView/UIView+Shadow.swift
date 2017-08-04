@@ -49,7 +49,7 @@ extension UIView{
         }
     }
     
-    @IBInspectable var shadowPath : CGPath?{
+    @IBInspectable public var shadowPath : CGPath?{
         set{
             layer.shadowPath = newValue
         }

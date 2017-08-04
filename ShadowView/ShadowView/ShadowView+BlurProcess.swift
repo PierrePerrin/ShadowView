@@ -10,7 +10,7 @@ import UIKit
 
 extension ShadowView{
     
-    func addImageView(){
+    internal func addImageView(){
         
         guard shadowImageView == nil else {
             return
@@ -26,7 +26,7 @@ extension ShadowView{
     
     
     
-    func updateShadow(){
+    public func updateShadow(){
         
         self.shadowImageView.image = nil
         DispatchQueue.global(qos: DispatchQoS.QoSClass.utility).async { [weak self] in
