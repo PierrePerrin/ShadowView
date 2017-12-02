@@ -13,6 +13,9 @@ public class ShadowView: UIView {
     internal var blurRadius :CGFloat = 5.0
     public var shadowImageView : UIImageView!
     internal let scaleImageConstant :CGFloat = 3
+    
+    public var highPerformanceBlur = true
+    
     public var correctShadowScale : CGFloat{
         return shadowScale + scaleImageConstant - 1
     }

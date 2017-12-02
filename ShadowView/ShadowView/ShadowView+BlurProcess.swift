@@ -29,39 +29,41 @@ extension ShadowView{
     public func updateShadow(){
         
         self.shadowImageView.image = nil
-        DispatchQueue.global(qos: DispatchQoS.QoSClass.utility).async { [weak self] in
-            self?.createLayerImage()
-        }
+     //   DispatchQueue.global(qos: DispatchQoS.QoSClass.utility).async { [weak self] in
+            self.createLayerImage()
+      //  }
     }
     
     private func createLayerImage(){
         
-        let image = asImage
-        let containerLayer = CALayer()
-        let imageSize = image.size
-        containerLayer.frame = CGRect(origin: .zero, size: imageSize.scaled(by:scaleImageConstant))
-        containerLayer.backgroundColor = UIColor.clear.cgColor
-        let blurImageLayer = CALayer()
-        blurImageLayer.frame = CGRect(origin: .zero,size: imageSize)
-        blurImageLayer.position = CGPoint(x:containerLayer.bounds.midX,y:containerLayer.bounds.midY)
-        blurImageLayer.contents = image.applyBlurWithRadius(0, tintColor: shadowColor, saturationDeltaFactor: shadowSaturation)?.cgImage
-        
-        blurImageLayer.masksToBounds = false
-        containerLayer.addSublayer(blurImageLayer)
-        let containerImage = containerLayer.asImage
-        
-        
-        let resizeImageConstant :CGFloat = 1
-        guard let resizedContainerImage = containerImage.resized(withPercentage: resizeImageConstant),
-            let blurredImage = resizedContainerImage.applyBlur(blurRadius: blurRadius)
-            else {
-                return
-        }
-        
-        layer.masksToBounds = false
-        
-        DispatchQueue.main.async { [weak self] in
-            self?.shadowImageView?.image = blurredImage
+        self.convertToImage { (image) in
+            
+            let containerLayer = CALayer()
+            let imageSize = image.size
+            containerLayer.frame = CGRect(origin: .zero, size: imageSize.scaled(by:self.scaleImageConstant))
+            containerLayer.backgroundColor = UIColor.clear.cgColor
+            let blurImageLayer = CALayer()
+            blurImageLayer.frame = CGRect(origin: .zero,size: imageSize)
+            blurImageLayer.position = CGPoint(x:containerLayer.bounds.midX,y:containerLayer.bounds.midY)
+            blurImageLayer.contents = image.applyBlurWithRadius(0, tintColor:self.shadowColor, saturationDeltaFactor: self.shadowSaturation)?.cgImage
+            
+            blurImageLayer.masksToBounds = false
+            containerLayer.addSublayer(blurImageLayer)
+            
+            let containerImage = containerLayer.asImage
+            
+            
+            let resizeImageConstant :CGFloat = self.highPerformanceBlur ? 0.3 : 1
+            guard let resizedContainerImage = containerImage.resized(withPercentage: resizeImageConstant),
+                let blurredImage = resizedContainerImage.applyBlur(blurRadius: self.blurRadius)
+                else {
+                    return
+            }
+            
+            DispatchQueue.main.async { [weak self] in
+                self?.layer.masksToBounds = false
+                self?.shadowImageView?.image = blurredImage
+            }
         }
         
     }

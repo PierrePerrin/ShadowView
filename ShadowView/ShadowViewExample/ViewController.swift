@@ -11,7 +11,7 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var exampleView: ShadowView!
-    @IBOutlet weak var imageviEW: UIImageView!
+    @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var otherImage: UIImageView!
     
     let image1 = #imageLiteral(resourceName: "sample.jpg")
@@ -43,11 +43,11 @@ class ViewController: UIViewController {
     
     @IBAction func CHANGEiMAGE(_ sender: Any) {
         
-        if self.imageviEW.image == image1{
-            self.imageviEW.image = image2
+        if self.imageView.image == image1{
+            self.imageView.image = image2
             self.otherImage.image = image2
         }else{
-            self.imageviEW.image = image1
+            self.imageView.image = image1
             self.otherImage.image = image1
         }
         

@@ -25,11 +25,17 @@ class ExampleProgViewController: UIViewController {
         
         self.view.addSubview(exampleShadowContainerView)
         self.exampleShadowContainerView.addSubview(imageView)
-        
     }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        self.exampleShadowContainerView.updateShadow()
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.exampleShadowContainerView.updateShadow()
+      //  self.exampleShadowContainerView.updateShadow()
     }
     
     override func viewDidLayoutSubviews() {
