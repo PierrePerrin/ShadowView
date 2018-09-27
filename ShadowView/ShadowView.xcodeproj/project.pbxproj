@@ -260,8 +260,8 @@
 					};
 					F907D1191F27ECA3007D4BE4 = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = PCKYQNTV3N;
-						LastSwiftMigration = 0830;
+						DevelopmentTeam = P5PSPS572B;
+						LastSwiftMigration = 1000;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -561,14 +561,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = PCKYQNTV3N;
+				DEVELOPMENT_TEAM = P5PSPS572B;
 				INFOPLIST_FILE = ShadowViewExample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = PP.ShadowViewExample;
+				PRODUCT_BUNDLE_IDENTIFIER = PP.ShadowViewExample.Pierre.Perrin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -577,13 +578,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = PCKYQNTV3N;
+				DEVELOPMENT_TEAM = P5PSPS572B;
 				INFOPLIST_FILE = ShadowViewExample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = PP.ShadowViewExample;
+				PRODUCT_BUNDLE_IDENTIFIER = PP.ShadowViewExample.Pierre.Perrin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};

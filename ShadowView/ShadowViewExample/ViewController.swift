@@ -27,7 +27,7 @@ class ViewController: UIViewController {
         sender.isContinuous = false
         
         self.exampleView.shadowRadius = CGFloat(sender.value * 50)
-        self.otherImage.shadowRadius = CGFloat(sender.value * 50)
+        self.otherImage.layer.shadowRadius = CGFloat(sender.value * 50)
     }
     
     @IBAction func shadowSize(_ sender: UISlider) {
@@ -38,7 +38,7 @@ class ViewController: UIViewController {
     @IBAction func shadowOpacity(_ sender: UISlider) {
         
         self.exampleView.shadowOpacity = sender.value
-        self.otherImage.shadowOpacity = sender.value
+        self.otherImage.layer.shadowOpacity = sender.value
     }
     
     @IBAction func CHANGEiMAGE(_ sender: Any) {

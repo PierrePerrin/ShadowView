@@ -13,9 +13,6 @@ public class ShadowView: UIView {
     internal var blurRadius :CGFloat = 5.0
     public var shadowImageView : UIImageView!
     internal let scaleImageConstant :CGFloat = 3
-    
-    public var highPerformanceBlur = true
-    
     public var correctShadowScale : CGFloat{
         return shadowScale + scaleImageConstant - 1
     }
@@ -42,7 +39,8 @@ public class ShadowView: UIView {
         }
     }
     private var shadowTintColor : UIColor?
-    public override var shadowColor: UIColor?{
+    
+    @IBInspectable public var shadowColor: UIColor?{
         get{
             return shadowTintColor
         }set{
@@ -50,13 +48,13 @@ public class ShadowView: UIView {
         }
     }
     
-    public override var shadowOffset : CGSize{
+    @IBInspectable public var shadowOffset : CGSize = .zero{
         didSet{
             layoutSubviews()
         }
     }
     
-    public override var shadowRadius : CGFloat{
+    @IBInspectable public var shadowRadius : CGFloat{
         set{
             blurRadius = newValue
             updateShadow()
@@ -66,7 +64,7 @@ public class ShadowView: UIView {
         }
     }
     
-    public override var shadowOpacity: Float{
+    @IBInspectable public var shadowOpacity: Float{
         set{
             shadowImageView.alpha = CGFloat(newValue)
         }
