@@ -2,48 +2,50 @@
 
 > ShadowView is an iOS Shadow library that makes view's shadow implementation easy and sweet 🎉 🎊.
 
-[![Swift Version][swift-image]][swift-url] [![Build Status][travis-image]][travis-url] [![License][license-image]][license-url] [![CocoaPods Compatible](https://img.shields.io/cocoapods/v/EZSwiftExtensions.svg)](https://img.shields.io/cocoapods/v/LFAlertController.svg)   [![Platform](https://img.shields.io/cocoapods/p/LFAlertController.svg?style=flat)](http://cocoapods.org/pods/ShadowView)
+[![Swift Version][swift-image]][swift-url] [![Build Status][travis-image]][travis-url] [![License][license-image]][license-url] [![CocoaPods Compatible](https://img.shields.io/cocoapods/v/EZSwiftExtensions.svg)](https://img.shields.io/cocoapods/v/LFAlertController.svg) [![Platform](https://img.shields.io/cocoapods/p/LFAlertController.svg?style=flat)](http://cocoapods.org/pods/ShadowView)
 
-----------
+---
 
 Add simple shadows to add a gaussian blurred projection (as a shadow) to any **UIView**.
 
 ![][example-image]
-## Table of contents
-<!-- TOC depthFrom:2 depthTo:4 withLinks:1 updateOnSave:1 orderedList:0 -->
-- [Features](#features)
-- [Requirements](#requirements)
-- [Installation](#installation)
-  - [CocoaPods](#cocoaPods)
-  - [Manually](#manually)
-- [How it works](#how-it-works)
-  - [Normal Shadows](#normal-shadows)
-  - [Projected Gaussian Shadows](#projected-gaussian-shadows)
-- [Usage example](#usage-example)
-  - [With Storyboard](#with-storyboard)
-  - [Programmatically](#programmatically)
-- [Parameters](#parameters)
-- [Notes](#notes)
-- [Contribute](#contribute)
-- [Meta](#meta)
-<!-- /TOC -->
 
+## Table of contents
+
+<!-- TOC depthFrom:2 depthTo:4 withLinks:1 updateOnSave:1 orderedList:0 -->
+
+-   [Features](#features)
+-   [Requirements](#requirements)
+-   [Installation](#installation)
+    -   [CocoaPods](#cocoaPods)
+    -   [Manually](#manually)
+-   [How it works](#how-it-works)
+    -   [Normal Shadows](#normal-shadows)
+    -   [Projected Gaussian Shadows](#projected-gaussian-shadows)
+-   [Usage example](#usage-example)
+    -   [With Storyboard](#with-storyboard)
+    -   [Programmatically](#programmatically)
+-   [Parameters](#parameters)
+-   [Notes](#notes)
+-   [Contribute](#contribute)
+-   [Meta](#meta)
+    <!-- /TOC -->
 
 ## Features
 
-- [x] Add shadow easily from the **storyboard** and **programmatically**.
-- [x] Add a gaussian blurred projection of your view (like iOS 10 music app).
-- [x] Customize the border width and border color of any view from storyboard .
+-   [x] Add shadow easily from the **storyboard** and **programmatically**.
+-   [x] Add a gaussian blurred projection of your view (like iOS 10 music app).
+-   [x] Customize the border width and border color of any view from storyboard .
 
 ## Requirements
 
-- iOS 9.0+
-- Xcode 8
+-   iOS 9.0+
+-   Xcode 8
 
 ## Installation
 
-
 #### CocoaPods
+
 You can use [CocoaPods](http://cocoapods.org/) to install `ShadowView` by adding it to your `Podfile`:
 
 ```ruby
@@ -56,23 +58,44 @@ pod 'ShadowView'
 end
 ```
 
+#### Carthage
+
+1. Install Carthage via Homebrew
+
+```bash
+$ brew update
+$ brew install carthage
+```
+
+2. Add `github "PierrePerrin/ShadowView"` to your Cartfile.
+
+3. Run `carthage update`.
+
+4. Drag `ShadowView.framework` from the `Carthage/Build/iOS/` directory to the `Linked Frameworks and Libraries` section of your Xcode project’s `General` settings.
+
+5. Add `$(SRCROOT)/Carthage/Build/iOS/ShadowView.framework` to `Input Files` of Run Script Phase for Carthage.
+
+#### Manually
+
+1. Download and drop all files in _ShadowView_ directory in your project.
+2. Nice Job the best shadow library is now installed! 🎉 🎊 🎈
+
+#### Import
+
 To get the full benefits import `ShadowView` wherever you import UIKit
 
-``` swift
+```swift
 import UIKit
 import ShadowView
 ```
-#### Manually
-1. Download and drop all files in *ShadowView* directory in your project.  
-2. Nice Job the best shadow library is now installed! 🎉 🎊 🎈 
 
 ## How it works
 
 #### Normal Shadows
- 
-This shadow framework uses default CoreGraphics shadows by adding it the the layer of the view. 
 
-``` swift
+This shadow framework uses default CoreGraphics shadows by adding it the the layer of the view.
+
+```swift
 layer.shadowColor : CGColor
 layer.shadowRadius : CGFloat
 layer.shadowOffset : CGSize
@@ -88,49 +111,51 @@ The container takes a screen of all it's subviews and then apply blur on it.
 
 ## Usage example
 
-### 	With Storyboard
+### With Storyboard
 
-#### 		Normal Shadows
+#### Normal Shadows
 
-Any view has new paramerters in the storyboar that you can change in order to add a customize shadow to your view.  
+Any view has new paramerters in the storyboar that you can change in order to add a customize shadow to your view.
 
-#### 		Projected Gaussian Shadows
+#### Projected Gaussian Shadows
+
 Add an UIView to you ViewController, change it class to ShadowView and insert in it all view that needs a blurred shadow.
-![][exampleSTR2-image]
+![][examplestr2-image]
 
-### 	Programmatically
+### Programmatically
 
-#### 		Normal Shadows
+#### Normal Shadows
 
-Set the shadows parameters to your view and it the shadow will appear! 🌟 
+Set the shadows parameters to your view and it the shadow will appear! 🌟
 
-``` swift
+```swift
 view.shadowRadius = 5
 view.shadowOffset = CGSize.zero
 view.shadowColor = UIColor.black.cgColor
-view.shadowOpacity = 0.3 
+view.shadowOpacity = 0.3
 ```
 
-#### 		Projected Gaussian Shadows
+#### Projected Gaussian Shadows
 
 Create you container ShadowView and then add views that need Shadows inside of it.
-``` swift
+
+```swift
     let exampleShadowContainerView = ShadowView()
     let imageView = UIImageView(image: #imageLiteral(resourceName: "sample.jpg"))
-    
+
     override func loadView() {
         super.loadView()
-        
+
         exampleShadowContainerView.frame = self.view.bounds
         exampleShadowContainerView.autoresizingMask = [.flexibleWidth,.flexibleHeight]
         exampleShadowContainerView.shadowOffset = CGSize(width: 0, height: 10)
         exampleShadowContainerView.shadowRadius = 20
-        
+
         self.view.addSubview(exampleShadowContainerView)
         self.exampleShadowContainerView.addSubview(imageView)
         imageView.center = exampleShadowContainerView.center
     }
-    
+
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         imageView.frame.size = CGSize(width: 200, height: 200)
@@ -139,11 +164,11 @@ Create you container ShadowView and then add views that need Shadows inside of i
     }
 ```
 
-*Please see the example for more prescisions.*
+_Please see the example for more prescisions._
 
 ## Parameters
 
-``` swift
+```swift
 
 //Shared Paramerters
 
@@ -174,23 +199,23 @@ Create you container ShadowView and then add views that need Shadows inside of i
 
 ## Notes
 
-*Don't* use Views like Sliders or ActivityIndicators, the shadow don't update un real-time.
+_Don't_ use Views like Sliders or ActivityIndicators, the shadow don't update un real-time.
 It's preferable to use statics Views like Labels, images...
 
 ## Contribute
 
-We would love you for the contribution to **ShadowView**, check the ``LICENSE`` file for more info.
+We would love you for the contribution to **ShadowView**, check the `LICENSE` file for more info.
 If you find an issue, [open a ticket](https://github.com/olddonkey/ShadowImageView/issues/new) on it.
 
 ## Meta
 
 Pierre Perrin – pierreperrin@outlook.com
 
-Distributed under the MIT license. See ``LICENSE`` for more information.
+Distributed under the MIT license. See `LICENSE` for more information.
 
 [https://github.com/PierrePerrin/](https://github.com/dbader/)
 
-[swift-image]:https://img.shields.io/badge/swift-3.0-orange.svg
+[swift-image]: https://img.shields.io/badge/swift-3.0-orange.svg
 [swift-url]: https://swift.org/
 [license-image]: https://img.shields.io/badge/License-MIT-blue.svg
 [license-url]: LICENSE
@@ -201,7 +226,4 @@ Distributed under the MIT license. See ``LICENSE`` for more information.
 [example-image]: https://github.com/PierrePerrin/ShadowView/raw/master/Ressources/Example.png
 [example2-image]: https://github.com/PierrePerrin/ShadowView/raw/master/Ressources/Example2.png
 [example2-image]: https://github.com/PierrePerrin/ShadowView/raw/master/Ressources/Example2.png
-[exampleSTR2-image]: https://github.com/PierrePerrin/ShadowView/raw/master/Ressources/exampleSTR2.png
-
-
-
+[examplestr2-image]: https://github.com/PierrePerrin/ShadowView/raw/master/Ressources/exampleSTR2.png
