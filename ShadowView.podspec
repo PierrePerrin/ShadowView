@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 	
 s.name             = 'ShadowView'
-s.version          = '1.3.1'
+s.version          = '1.4.0'
 s.summary          = 'ShadowView is an iOS Shadow library that makes view\'s shadow implementation easy and sweet'
 
 s.description      = <<-DESC
