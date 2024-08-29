@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 	
 s.name             = 'ShadowView'
-s.version          = '1.3'
+s.version          = '1.5.0'
 s.summary          = 'ShadowView is an iOS Shadow library that makes view\'s shadow implementation easy and sweet'
 
 s.description      = <<-DESC
@@ -13,7 +13,7 @@ s.homepage         = 'https://github.com/PierrePerrin/ShadowView'
 s.license          = { :type => 'MIT', :file => 'LICENSE' }
 s.author           = { 'Pierre Pierrin' => 'pierreperrin@outlook.com' }
 s.source           = { :git => 'https://github.com/PierrePerrin/ShadowView.git', :tag => s.version.to_s }
-s.ios.deployment_target = '8.1'
+s.ios.deployment_target = '12.0'
 s.source_files = 'ShadowView/ShadowView/*.swift'
 
 end
